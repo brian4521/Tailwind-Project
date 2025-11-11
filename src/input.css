@@ -2,5 +2,5 @@
 
 @import "tailwindcss";
 @theme {
-    --font-jost:"Jost", sans-serif;
+    --font-jost:"Jost", sans-serif; 
 }
