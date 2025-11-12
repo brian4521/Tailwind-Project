@@ -170,6 +170,18 @@
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
+  .left-\[-100\%\] {
+    left: -100%;
+  }
+  .left-\[-100\] {
+    left: -100;
+  }
+  .left-\[-full\] {
+    left: -full;
+  }
+  .left-\[0px\] {
+    left: 0px;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -187,9 +199,6 @@
   }
   .w-\[70\%\] {
     width: 70%;
-  }
-  .w-\[70\] {
-    width: 70;
   }
   .max-w-\[1240px\] {
     max-width: 1240px;
@@ -219,14 +228,26 @@
   .bg-\[\#0f0\] {
     background-color: #0f0;
   }
+  .bg-\[\#004700\] {
+    background-color: #004700;
+  }
   .bg-\[url\(\'images\/background\.jpg\'\)\] {
     background-image: url('images/background.jpg');
   }
   .bg-cover {
     background-size: cover;
   }
+  .p-0 {
+    padding: calc(var(--spacing) * 0);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .px-\[20px\] {
+    padding-inline: 20px;
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -250,9 +271,18 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .duration-500 {
+    --tw-duration: 500ms;
+    transition-duration: 500ms;
+  }
   .md\:static {
     @media (width >= 48rem) {
       position: static;
+    }
+  }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
     }
   }
   .md\:h-auto {
@@ -280,6 +310,11 @@
       padding: calc(var(--spacing) * 0);
     }
   }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
 }
 @property --tw-border-style {
   syntax: "*";
@@ -291,11 +326,16 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-outline-style: solid;
+      --tw-duration: initial;
     }
   }
 }
